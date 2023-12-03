@@ -34,7 +34,7 @@ const createOptionalButtons = (
   yellowBtnCallback?: () => void,
   greenBtnCallback?: () => void
 ) => {
-  const RedBtn = !redBtnCallback ? (
+  const RedBtn = !!redBtnCallback ? (
     <button
       className={`clickable red-btn`}
       disabled={!redBtnCallback}
@@ -44,7 +44,7 @@ const createOptionalButtons = (
     <div></div>
   );
 
-  const YellowBtn = !yellowBtnCallback ? (
+  const YellowBtn = !!yellowBtnCallback ? (
     <button
       className={`clickable yellow-btn`}
       disabled={!yellowBtnCallback}
@@ -54,7 +54,7 @@ const createOptionalButtons = (
     <div></div>
   );
 
-  const GreenBtn = !greenBtnCallback ? (
+  const GreenBtn = !!greenBtnCallback ? (
     <button
       className={`clickable green-btn`}
       disabled={!greenBtnCallback}
